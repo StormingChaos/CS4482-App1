@@ -248,31 +248,6 @@ RectTransform:
   m_AnchoredPosition: {x: 2.5, y: 0}
   m_SizeDelta: {x: -5, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &258589548 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3840668376351311033, guid: b589667cf24be114cb420f2e3205ef8c,
-    type: 3}
-  m_PrefabInstance: {fileID: 3840668376596137941}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &258589549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 258589548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e39bbf875ebd24419da4be0527a8b10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  healthSlider: {fileID: 29698799}
-  damageImage: {fileID: 829113691}
-  deathClip: {fileID: 8300000, guid: d36a393bca4582043982db9089e1694f, type: 3}
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
 --- !u!4 &258891602 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3840668376350890119, guid: b589667cf24be114cb420f2e3205ef8c,
@@ -1219,6 +1194,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenAttacks: 0.5
   attackDamage: 10
+--- !u!114 &1609951770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609951761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0c4110482e8cb4ba6d773cba91b4ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+  currentHealth: 0
+  sinkSpeed: 0.5
+  scoreValue: 10
+  deathClip: {fileID: 0}
 --- !u!1001 &1649600065
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1294,6 +1286,10 @@ PrefabInstance:
     - target: {fileID: 409160, guid: ad67cddd729fb4342be2063a3f5ad7cc, type: 3}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 409160, guid: ad67cddd729fb4342be2063a3f5ad7cc, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 409160, guid: ad67cddd729fb4342be2063a3f5ad7cc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1525,6 +1521,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 258589549, guid: b589667cf24be114cb420f2e3205ef8c, type: 3}
+      propertyPath: damageImage
+      value: 
+      objectReference: {fileID: 829113691}
+    - target: {fileID: 258589549, guid: b589667cf24be114cb420f2e3205ef8c, type: 3}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 29698799}
     - target: {fileID: 3840668376350890119, guid: b589667cf24be114cb420f2e3205ef8c,
         type: 3}
       propertyPath: m_RootOrder
