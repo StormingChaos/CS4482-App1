@@ -35,7 +35,7 @@ public class PlayerShooting : MonoBehaviour
         timer += Time.deltaTime;
 
         // If the Fire1 button is being pressed and it's time to fire...
-        if (Input.GetButton("Fire1") && timer >= timeBetweenBullets)
+        if (Input.GetButton("Fire1") && timer >= timeBetweenBullets && AmmoManager.ammo > 0)
         {
             // ... shoot the gun.
             Shoot();
@@ -73,6 +73,8 @@ public class PlayerShooting : MonoBehaviour
         // Set the shootRay so that it starts at the end of the gun and points forward from the barrel.
         shootRay.origin = transform.position;
         shootRay.direction = transform.forward;
+        // use up ammo
+        AmmoManager.ammo--;
 
         // Perform the raycast against gameobjects on the shootable layer and if it hits something...
         if (Physics.Raycast(shootRay, out shootHit, range, shootableMask))
