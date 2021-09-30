@@ -259,11 +259,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd0c4110482e8cb4ba6d773cba91b4ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
+  startingHealth: 150
   currentHealth: 0
   sinkSpeed: 0.5
-  scoreValue: 10
+  scoreValue: 25
   deathClip: {fileID: 8300000, guid: 62366b8d2c37a49dca550841c741317f, type: 3}
+  droppedItem: {fileID: 2074948785678056569, guid: 8c437393c8d3f0441b028e8ffb7b06d8,
+    type: 3}
+  dropChance: 50
 --- !u!1 &251522329180894983
 GameObject:
   m_ObjectHideFlags: 0

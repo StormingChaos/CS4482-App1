@@ -11,6 +11,9 @@ public class EnemyHealth : MonoBehaviour
     public int scoreValue = 10;             // The amount added to the player's score when the enemy dies.
     public AudioClip deathClip;             // The sound to play when the enemy dies.
 
+    public GameObject droppedItem;          // item that this enemy will drop when it dies
+    public float dropChance;                // chance that this enemy will drop an item (percent 0-100)
+
     Animator anim;                          // Reference to the animator.
     AudioSource enemyAudio;                 // Reference to the audio source.
     ParticleSystem hitParticles;            // Reference to the particle system that plays when the enemy is damaged.
@@ -62,6 +65,7 @@ public class EnemyHealth : MonoBehaviour
         {
             // ... the enemy is dead.
             Death();
+            DropItem();
         }
     }
 
@@ -76,6 +80,21 @@ public class EnemyHealth : MonoBehaviour
         // Change the audio clip of the audio source to the death clip and play it (this will stop the hurt clip playing).
         enemyAudio.clip = deathClip;
         enemyAudio.Play();
+    }
+
+    //enemy will drop an item once it dies
+    void DropItem()
+    {
+        //make sure enemy is actually dead and has a drop
+        if (isDead && droppedItem != null)
+        {
+            Vector3 spawnPoint = new Vector3(transform.position.x, 1, transform.position.y);
+            //set up random chance
+            if (Random.Range(0, 100) <= dropChance)
+            {
+                Instantiate(droppedItem, spawnPoint, transform.rotation);
+            }
+        }
     }
 
     public void StartSinking()
