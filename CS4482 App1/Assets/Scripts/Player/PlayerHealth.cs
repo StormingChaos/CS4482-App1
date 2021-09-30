@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -81,5 +82,10 @@ public class PlayerHealth : MonoBehaviour
         // Turn off the movement and shooting scripts.
         playerMovement.enabled = false;
         playerShooting.enabled = false;
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene("Level 01");
     }
 }
