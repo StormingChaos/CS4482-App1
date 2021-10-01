@@ -266,7 +266,7 @@ MonoBehaviour:
   deathClip: {fileID: 8300000, guid: 62366b8d2c37a49dca550841c741317f, type: 3}
   droppedItem: {fileID: 2074948785678056569, guid: 8c437393c8d3f0441b028e8ffb7b06d8,
     type: 3}
-  dropChance: 50
+  dropChance: 25
 --- !u!1 &251522329180894983
 GameObject:
   m_ObjectHideFlags: 0

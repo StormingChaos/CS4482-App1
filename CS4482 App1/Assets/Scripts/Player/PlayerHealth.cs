@@ -50,6 +50,11 @@ public class PlayerHealth : MonoBehaviour
         damaged = false;
     }
 
+    public void updateHealthSlider()
+    {
+        healthSlider.value = currentHealth;
+    }
+
     public void TakeDamage(int amount)
     {
         // Set the damaged flag so the screen will flash.

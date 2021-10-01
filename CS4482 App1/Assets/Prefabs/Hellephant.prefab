@@ -381,7 +381,7 @@ MonoBehaviour:
   deathClip: {fileID: 8300000, guid: 8c615fd0429f34edf85539d70279360d, type: 3}
   droppedItem: {fileID: 8955197110393400006, guid: b458dcb113101f14ca5f82046f49547d,
     type: 3}
-  dropChance: 50
+  dropChance: 20
 --- !u!1001 &5130088989617491703
 PrefabInstance:
   m_ObjectHideFlags: 0
